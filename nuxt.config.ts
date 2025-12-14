@@ -13,4 +13,12 @@ export default defineNuxtConfig({
     serviceKey: process.env.SUPABASE_SERVICE_ROLE_KEY,
     // can be found in supabase dashboard under project settings -> API Keys
   },
+  // Ensure static assets are properly handled in production
+  app: {
+    head: {
+      link: [
+        { rel: 'preload', as: 'image', href: '/full_logo.png' }
+      ]
+    }
+  }
 });
