@@ -13,6 +13,13 @@ export default defineNuxtConfig({
     serviceKey: process.env.SUPABASE_SERVICE_ROLE_KEY,
     // can be found in supabase dashboard under project settings -> API Keys
   },
+  // Ensure Tailwind CSS is properly built and includes all classes
+  tailwindcss: {
+    cssPath: '~/assets/css/main.css',
+    configPath: 'tailwind.config.js',
+    exposeConfig: false,
+    viewer: true,
+  },
   // Ensure static assets are properly handled in production
   app: {
     head: {
