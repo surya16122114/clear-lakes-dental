@@ -274,15 +274,15 @@ function toggleMode() {
   <div class="fixed inset-0 overflow-y-auto bg-gradient-to-br from-blue-50 to-green-50">
     <div class="relative flex flex-col items-center justify-center min-h-full p-4 sm:p-6 md:p-8 w-full">
     <!-- Logo at the top -->
-    <div class="absolute top-2 sm:top-4 md:top-6 lg:top-8 left-1/2 transform -translate-x-1/2 z-20">
+    <div class="absolute top-2 sm:top-4 md:top-2 lg:top-8 left-1/2 transform -translate-x-1/2 z-20">
       <img
         src="/full_logo.png"
         alt="Clear Lakes Dental"
-        class="w-24 sm:w-32 md:w-48 lg:w-64 h-auto mx-auto mb-1 sm:mb-2 md:mb-3 lg:mb-4"
+        class="w-24 sm:w-28 md:w-32 lg:w-64 h-auto mx-auto mb-1 sm:mb-1.5 md:mb-1.5 lg:mb-4"
       />
       <div class="text-center">
-        <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800">Clear Lakes Dental</h1>
-        <p class="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-gray-600 mt-0.5 sm:mt-1 md:mt-1.5 lg:mt-2">Demo</p>
+        <h1 class="text-xl sm:text-2xl md:text-xl lg:text-4xl font-bold text-gray-800">Clear Lakes Dental</h1>
+        <p class="text-base sm:text-lg md:text-base lg:text-2xl font-semibold text-gray-600 mt-0.5 sm:mt-0.5 md:mt-0.5 lg:mt-2">Demo</p>
       </div>
     </div>
     
@@ -293,7 +293,7 @@ function toggleMode() {
     </div>
 
     <!-- Login Form -->
-    <div class="relative w-full max-w-md z-10 mt-40 sm:mt-44 md:mt-48 lg:mt-32 px-4 sm:px-6">
+    <div class="relative w-full max-w-md z-10 mt-[140px] sm:mt-[160px] md:mt-[180px] lg:mt-32 xl:mt-28 px-4 sm:px-6">
       <div class="bg-white p-5 sm:p-6 md:p-7 lg:p-8 rounded-xl shadow-2xl border border-gray-200 backdrop-blur-sm">
         <div class="text-center mb-6 sm:mb-7 md:mb-8">
           <h2 class="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-1 sm:mb-1.5 md:mb-2">
