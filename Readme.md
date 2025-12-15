@@ -131,8 +131,7 @@ nuxt_template/
 ### Viewing Data
 
 1. The **Main Page** displays all entries in a table format
-2. Refresh the page to see new entries (data persists in Supabase)
-3. The table shows:
+2. The table shows:
    - Entry ID
    - Name
    - Email
