@@ -60,9 +60,9 @@ watchEffect(async () => {
 <template>
   <!-- Example of how to use a reusable component. No import is needed, all components are automatically imported. -->
   <Header />
-  <div class="flex flex-col items-center min-h-screen pt-4 pb-8 px-8 bg-[#0a0e27]">
+  <div class="flex flex-col items-center min-h-screen pt-2 sm:pt-4 pb-4 sm:pb-8 px-2 sm:px-4 md:px-6 lg:px-8 bg-[#0a0e27]">
     <div class="w-full max-w-6xl mx-auto">
-      <h2 class="text-4xl font-bold mb-6 text-center text-white">Database Entries</h2>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-center text-white px-2">Database Entries</h2>
       
       <div v-if="isLoading" class="text-center py-8">
         <p class="text-gray-300">Loading data...</p>
@@ -85,22 +85,22 @@ watchEffect(async () => {
       <div v-else class="flex justify-center w-full">
         <div class="w-full rounded-xl shadow-2xl overflow-hidden">
           <div class="overflow-x-auto">
-            <table class="w-full bg-white">
+            <table class="w-full bg-white min-w-[600px]">
               <thead class="bg-gradient-to-r from-blue-600 via-blue-500 to-green-500">
                 <tr>
-                  <th class="px-3 md:px-4 py-3 md:py-4 text-left text-xs md:text-sm font-bold text-white uppercase tracking-wider whitespace-nowrap">
+                  <th class="px-2 sm:px-3 md:px-4 py-2 sm:py-3 md:py-4 text-left text-xs sm:text-xs md:text-sm font-bold text-white uppercase tracking-wider whitespace-nowrap">
                     ID
                   </th>
-                  <th class="px-3 md:px-4 py-3 md:py-4 text-left text-xs md:text-sm font-bold text-white uppercase tracking-wider whitespace-nowrap">
+                  <th class="px-2 sm:px-3 md:px-4 py-2 sm:py-3 md:py-4 text-left text-xs sm:text-xs md:text-sm font-bold text-white uppercase tracking-wider whitespace-nowrap">
                     Name
                   </th>
-                  <th class="px-3 md:px-4 py-3 md:py-4 text-left text-xs md:text-sm font-bold text-white uppercase tracking-wider whitespace-nowrap">
+                  <th class="px-2 sm:px-3 md:px-4 py-2 sm:py-3 md:py-4 text-left text-xs sm:text-xs md:text-sm font-bold text-white uppercase tracking-wider whitespace-nowrap">
                     Email
                   </th>
-                  <th class="px-3 md:px-4 py-3 md:py-4 text-left text-xs md:text-sm font-bold text-white uppercase tracking-wider">
+                  <th class="px-2 sm:px-3 md:px-4 py-2 sm:py-3 md:py-4 text-left text-xs sm:text-xs md:text-sm font-bold text-white uppercase tracking-wider">
                     Message
                   </th>
-                  <th class="px-3 md:px-4 py-3 md:py-4 text-left text-xs md:text-sm font-bold text-white uppercase tracking-wider whitespace-nowrap">
+                  <th class="px-2 sm:px-3 md:px-4 py-2 sm:py-3 md:py-4 text-left text-xs sm:text-xs md:text-sm font-bold text-white uppercase tracking-wider whitespace-nowrap">
                     Created At
                   </th>
                 </tr>
@@ -112,24 +112,25 @@ watchEffect(async () => {
                   class="hover:bg-gradient-to-r hover:from-blue-50 hover:to-green-50 transition-all duration-200"
                   :class="index % 2 === 0 ? 'bg-white' : 'bg-gray-50'"
                 >
-                  <td class="px-3 md:px-4 py-3 md:py-4 whitespace-nowrap text-xs md:text-sm font-semibold text-gray-800">
+                  <td class="px-2 sm:px-3 md:px-4 py-2 sm:py-3 md:py-4 whitespace-nowrap text-xs sm:text-xs md:text-sm font-semibold text-gray-800">
                     #{{ item.id }}
                   </td>
-                  <td class="px-3 md:px-4 py-3 md:py-4 whitespace-nowrap text-xs md:text-sm font-medium text-gray-900">
-                    <div class="truncate max-w-[150px]" :title="item.name">
+                  <td class="px-2 sm:px-3 md:px-4 py-2 sm:py-3 md:py-4 whitespace-nowrap text-xs sm:text-xs md:text-sm font-medium text-gray-900">
+                    <div class="truncate max-w-[100px] sm:max-w-[120px] md:max-w-[150px]" :title="item.name">
                       {{ item.name }}
                     </div>
                   </td>
-                  <td class="px-3 md:px-4 py-3 md:py-4 whitespace-nowrap text-xs md:text-sm text-blue-600 hover:text-blue-800">
-                    <a :href="`mailto:${item.email}`" class="hover:underline truncate block max-w-[200px]" :title="item.email">{{ item.email }}</a>
+                  <td class="px-2 sm:px-3 md:px-4 py-2 sm:py-3 md:py-4 whitespace-nowrap text-xs sm:text-xs md:text-sm text-blue-600 hover:text-blue-800">
+                    <a :href="`mailto:${item.email}`" class="hover:underline truncate block max-w-[120px] sm:max-w-[150px] md:max-w-[200px]" :title="item.email">{{ item.email }}</a>
                   </td>
-                  <td class="px-3 md:px-4 py-3 md:py-4 text-xs md:text-sm text-gray-700">
-                    <div class="break-words whitespace-normal leading-relaxed max-w-[400px]">
+                  <td class="px-2 sm:px-3 md:px-4 py-2 sm:py-3 md:py-4 text-xs sm:text-xs md:text-sm text-gray-700">
+                    <div class="break-words whitespace-normal leading-relaxed max-w-[200px] sm:max-w-[300px] md:max-w-[400px]">
                       {{ item.message }}
                     </div>
                   </td>
-                  <td class="px-3 md:px-4 py-3 md:py-4 whitespace-nowrap text-xs md:text-sm text-gray-500">
-                    {{ item.created_at ? new Date(item.created_at).toLocaleString() : 'N/A' }}
+                  <td class="px-2 sm:px-3 md:px-4 py-2 sm:py-3 md:py-4 whitespace-nowrap text-xs sm:text-xs md:text-sm text-gray-500">
+                    <span class="hidden sm:inline">{{ item.created_at ? new Date(item.created_at).toLocaleString() : 'N/A' }}</span>
+                    <span class="sm:hidden">{{ item.created_at ? new Date(item.created_at).toLocaleDateString() : 'N/A' }}</span>
                   </td>
                 </tr>
               </tbody>

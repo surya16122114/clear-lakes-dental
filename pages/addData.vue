@@ -131,14 +131,14 @@ async function submitForm() {
 
 <template>
   <Header />
-  <div class="flex flex-col items-center min-h-screen pt-4 pb-8 px-8 bg-[#0a0e27]">
+  <div class="flex flex-col items-center min-h-screen pt-2 sm:pt-4 pb-4 sm:pb-8 px-2 sm:px-4 md:px-6 lg:px-8 bg-[#0a0e27]">
     <div class="w-full max-w-2xl">
-      <div class="text-center mb-6">
-        <h2 class="text-4xl font-bold text-white mb-2">Add New Entry</h2>
-        <p class="text-gray-300">Fill in the form below to add a new database entry</p>
+      <div class="text-center mb-4 sm:mb-6 px-2">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">Add New Entry</h2>
+        <p class="text-sm sm:text-base text-gray-300">Fill in the form below to add a new database entry</p>
       </div>
       
-      <div class="bg-white p-8 rounded-xl shadow-2xl border-2 border-gray-200">
+      <div class="bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-2xl border-2 border-gray-200">
         <form @submit.prevent="submitForm" novalidate class="space-y-6">
           <div>
             <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">

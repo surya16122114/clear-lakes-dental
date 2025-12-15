@@ -38,18 +38,18 @@ async function handleLogout() {
 <template>
   <div class="flex flex-col w-full bg-[#0a0e27] border-b border-gray-800">
     <!-- Top row: Logo, Database Demo heading (centered), and User info -->
-    <div class="flex flex-row justify-between items-center w-full px-4 md:px-8 py-4 relative">
+    <div class="flex flex-row justify-between items-center w-full px-2 sm:px-4 md:px-6 lg:px-8 py-2 sm:py-3 md:py-4 relative">
       <img
         src="../public/full_logo.png"
         alt="Clear Lakes Dental"
-        class="w-32 h-auto md:w-[256px] md:h-[152px] flex-shrink-0"
+        class="w-20 sm:w-24 md:w-32 lg:w-[256px] h-auto flex-shrink-0"
       />
-      <h1 class="text-xl md:text-3xl font-bold text-white absolute left-1/2 transform -translate-x-1/2 z-10 px-2">Database Demo</h1>
-      <div v-if="user" class="flex flex-col sm:flex-row items-end sm:items-center gap-2 sm:gap-4 flex-shrink-0">
-        <span class="text-sm md:text-lg font-bold text-white whitespace-nowrap">Welcome, {{ userName }}!</span>
+      <h1 class="text-base sm:text-lg md:text-xl lg:text-3xl font-bold text-white absolute left-1/2 transform -translate-x-1/2 z-10 px-1 sm:px-2">Database Demo</h1>
+      <div v-if="user" class="flex flex-col sm:flex-row items-end sm:items-center gap-1 sm:gap-2 md:gap-4 flex-shrink-0">
+        <span class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-white whitespace-nowrap">Welcome, {{ userName }}!</span>
         <button
           @click="handleLogout"
-          class="text-xs md:text-sm bg-red-500 text-white px-3 md:px-5 py-1.5 md:py-2.5 rounded-lg hover:bg-red-600 transition-all shadow-md hover:shadow-lg font-semibold whitespace-nowrap"
+          class="text-xs sm:text-xs md:text-sm bg-red-500 text-white px-2 sm:px-3 md:px-5 py-1 sm:py-1.5 md:py-2.5 rounded-lg hover:bg-red-600 transition-all shadow-md hover:shadow-lg font-semibold whitespace-nowrap"
         >
           Logout
         </button>
@@ -57,18 +57,18 @@ async function handleLogout() {
     </div>
     
     <!-- Bottom row: Navigation - Centered -->
-    <div class="flex flex-row justify-center gap-8 items-center px-8 pb-4">
+    <div class="flex flex-row justify-center gap-4 sm:gap-6 md:gap-8 items-center px-2 sm:px-4 md:px-6 lg:px-8 pb-2 sm:pb-3 md:pb-4">
       <!-- Main Page - Active if on index -->
       <button
         v-if="isActive('/')"
-        class="px-6 py-2.5 rounded-lg bg-gray-800 text-white font-medium transition-all shadow-lg"
+        class="px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-2.5 rounded-lg bg-gray-800 text-white text-sm sm:text-base font-medium transition-all shadow-lg"
         @click="navigateTo('/')"
       >
         Main Page
       </button>
       <button
         v-else
-        class="px-6 py-2.5 text-gray-400 hover:text-gray-300 font-medium transition-colors cursor-pointer"
+        class="px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-2.5 text-gray-400 hover:text-gray-300 text-sm sm:text-base font-medium transition-colors cursor-pointer"
         @click="navigateTo('/')"
       >
         Main Page
@@ -77,14 +77,14 @@ async function handleLogout() {
       <!-- Add Data - Active if on addData -->
       <button
         v-if="isActive('/addData')"
-        class="px-6 py-2.5 rounded-lg bg-gray-800 text-white font-medium transition-all shadow-lg"
+        class="px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-2.5 rounded-lg bg-gray-800 text-white text-sm sm:text-base font-medium transition-all shadow-lg"
         @click="navigateTo('/addData')"
       >
         Add Data
       </button>
       <button
         v-else
-        class="px-6 py-2.5 text-gray-400 hover:text-gray-300 font-medium transition-colors cursor-pointer"
+        class="px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-2.5 text-gray-400 hover:text-gray-300 text-sm sm:text-base font-medium transition-colors cursor-pointer"
         @click="navigateTo('/addData')"
       >
         Add Data
